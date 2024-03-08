@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Talking pets</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .button:hover {
+    background-color: #45a049;
+  }
+  .image-container {
+    display: none;
+  }
+  p{
+    font-size: 25px;
+  }
+  img {
+    max-width: 40%;
+    width: 100%;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<button class="button" onclick="showImage('image1')">BEN</button>
+<button class="button" onclick="showImage('image2')">TOM</button>
+<button class="button" onclick="showImage('image3')">GINGER</button>
+
+<div class="image-container" id="image1">
+  <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHHFT949fUipzkiFOBH3fAiZZUCdYojwUyX2aTonS1aIwMrx6NUIsHfUHSLzjGJFxxmqq145bnYA8VpjSpqJpmURT5vdPEYPBsS1KtKVweuM_w5iH9.IOG8zlWXzBHlx.cZnVFfCjOMTmLhWWDR7bQbo-&format=source" alt="Image 1">
+  <h1>BEN</h1>
+    <p>Ben is a smart golden labradoodle that is very good at science!</p>
+</div>
+<div class="image-container" id="image2">
+  <img src="https://images-eds-ssl.xboxlive.com/image?url=4rt9.lXDC4H_93laV1_eHM0OYfiFeMI2p9MWie0CvL99U4GA1gf6_kayTt_kBblFwHwo8BW8JXlqfnYxKPmmBf6qqep_Iuqhotkc3OUV5NuXHqRnp_JiAnJrtRsa30VOkTMv3eUbHYUBBrefgSoWU8cYS0tvn8oeTxNOp1Ddqvw-&format=source" alt="Image 2">
+  <h1>TOM</h1>
+  <p>Tom is an adult tabby cat that likes to sleep.</p>
+</div>
+<div class="image-container" id="image3">
+  <img src="https://images.sftcdn.net/images/t_app-icon-m/p/1768f240-9b2e-11e6-b652-00163ed833e7/600607583/talking-ginger-logo.png" alt="Image 3">
+  <h1>GINGER</h1>
+  <p>Ginger is a small ginger kitten that likes to play!</p>
+</div>
+
+<script>
+  function showImage(id) {
+    let images = document.getElementsByClassName('image-container');
+    for (let i = 0; i < images.length; i++) {
+      images[i].style.display = 'none';
+    }
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
